@@ -1,4 +1,4 @@
-These are the core Babylon AST node types.
+These are the core ingredients AST node types.
 
 - [Node objects](#node-objects)
 - [Identifier](#identifier)

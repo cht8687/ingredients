@@ -11,7 +11,7 @@ bootstrap-babel: clean
 	git clone --depth=1 --branch=master https://github.com/babel/babel.git ./build/babel
 	cd ./build/babel; \
 	make bootstrap
-	find ./build/babel/packages -type d -name 'babylon' -prune -exec rm -rf '{}' \; -exec ln -s '../../../../../' '{}' \;
+	find ./build/babel/packages -type d -name 'ingredients' -prune -exec rm -rf '{}' \; -exec ln -s '../../../../../' '{}' \;
 
 test-babel:
 	npm run build

@@ -6,7 +6,7 @@ contributing, please read the
 
 ## Setup local env
 
-To start developing on babylon you only need to install its dependencies:
+To start developing on ingredients you only need to install its dependencies:
 
 ```bash
 npm install
@@ -20,25 +20,25 @@ npm test
 
 ## Cross repository changes
 
-If you are making changes to babylon which make it necessary to also change things in babel you will want to link both repositories together. This can be done by doing the following (assuming you have both babel and babylon already checked out):
+If you are making changes to ingredients which make it necessary to also change things in babel you will want to link both repositories together. This can be done by doing the following (assuming you have both babel and ingredients already checked out):
 
 ```bash
-cd babylon/
+cd ingredients/
 npm link
 npm run build
 cd ../babel/
 make bootstrap
-npm link babylon
+npm link ingredients
 cd packages/babel-core/
-npm link babylon
+npm link ingredients
 cd ../../packages/babel-template/
-npm link babylon
+npm link ingredients
 cd ../../packages/babel-traverse/
-npm link babylon
+npm link ingredients
 cd ../../packages/babel-generator/
-npm link babylon
+npm link ingredients
 make build
 make test
 ```
 
-From now on babel will use your local checkout of babylon for its tests.
+From now on babel will use your local checkout of ingredients for its tests.

@@ -1,11 +1,11 @@
 {
-  "name": "babylon",
+  "name": "ingredients",
   "version": "6.9.2",
   "description": "A JavaScript parser",
   "author": "Sebastian McKenzie <sebmck@gmail.com>",
   "homepage": "https://babeljs.io/",
   "license": "MIT",
-  "repository": "https://github.com/babel/babylon",
+  "repository": "https://github.com/babel/ingredients",
   "main": "lib/index.js",
   "files": [
     "bin",
@@ -27,7 +27,7 @@
     "unicode-9.0.0": "~0.7.0"
   },
   "bin": {
-    "babylon": "./bin/babylon.js"
+    "ingredients": "./bin/ingredients.js"
   },
   "scripts": {
     "build": "babel src --out-dir lib",

@@ -16,6 +16,8 @@
 // to know when parsing a label, in order to allow or disallow
 // continue jumps to that label.
 
+import keywordsMapping from "./keywords-mapping";
+
 export class TokenType {
   constructor(label, conf = {}) {
     this.label = label;
@@ -109,40 +111,40 @@ function kw(name, options = {}) {
   keywords[name] = types["_" + name] = new TokenType(name, options);
 }
 
-kw("break");
-kw("case", beforeExpr);
-kw("catch");
-kw("continue");
-kw("debugger");
-kw("default", beforeExpr);
-kw("do", {isLoop: true, beforeExpr: true});
-kw("else", beforeExpr);
-kw("finally");
-kw("for", {isLoop: true});
-kw("function", startsExpr);
-kw("if");
-kw("return", beforeExpr);
-kw("switch");
-kw("throw", beforeExpr);
-kw("try");
-kw("var");
-kw("let");
-kw("const");
-kw("while", {isLoop: true});
-kw("with");
-kw("new", {beforeExpr: true, startsExpr: true});
-kw("this", startsExpr);
-kw("super", startsExpr);
-kw("class");
-kw("extends", beforeExpr);
-kw("export");
-kw("import");
-kw("yield", {beforeExpr: true, startsExpr: true});
-kw("null", startsExpr);
-kw("true", startsExpr);
-kw("false", startsExpr);
-kw("in", {beforeExpr: true, binop: 7});
-kw("instanceof", {beforeExpr: true, binop: 7});
-kw("typeof", {beforeExpr: true, prefix: true, startsExpr: true});
-kw("void", {beforeExpr: true, prefix: true, startsExpr: true});
-kw("delete", {beforeExpr: true, prefix: true, startsExpr: true});
+kw(keywordsMapping.break);
+kw(keywordsMapping.case, beforeExpr);
+kw(keywordsMapping.catch);
+kw(keywordsMapping.continue);
+kw(keywordsMapping.debugger);
+kw(keywordsMapping.default, beforeExpr);
+kw(keywordsMapping.do, {isLoop: true, beforeExpr: true});
+kw(keywordsMapping.else, beforeExpr);
+kw(keywordsMapping.finally);
+kw(keywordsMapping.for, {isLoop: true});
+kw(keywordsMapping.function, startsExpr);
+kw(keywordsMapping.if);
+kw(keywordsMapping.return, beforeExpr);
+kw(keywordsMapping.switch);
+kw(keywordsMapping.throw, beforeExpr);
+kw(keywordsMapping.try);
+kw(keywordsMapping.var);
+kw(keywordsMapping.let);
+kw(keywordsMapping.const);
+kw(keywordsMapping.while, {isLoop: true});
+kw(keywordsMapping.with);
+kw(keywordsMapping.new, {beforeExpr: true, startsExpr: true});
+kw(keywordsMapping.this, startsExpr);
+kw(keywordsMapping.super, startsExpr);
+kw(keywordsMapping.class);
+kw(keywordsMapping.extends, beforeExpr);
+kw(keywordsMapping.export);
+kw(keywordsMapping.import);
+kw(keywordsMapping.yield, {beforeExpr: true, startsExpr: true});
+kw(keywordsMapping.null, startsExpr);
+kw(keywordsMapping.true, startsExpr);
+kw(keywordsMapping.false, startsExpr);
+kw(keywordsMapping.in, {beforeExpr: true, binop: 7});
+kw(keywordsMapping.instanceof, {beforeExpr: true, binop: 7});
+kw(keywordsMapping.typeof, {beforeExpr: true, prefix: true, startsExpr: true});
+kw(keywordsMapping.void, {beforeExpr: true, prefix: true, startsExpr: true});
+kw(keywordsMapping.delete, {beforeExpr: true, prefix: true, startsExpr: true});
